@@ -1,0 +1,14 @@
+apply plugin: 'base'
+apply plugin: 'groovy'
+
+task Greetings() {
+  doLast {
+    print "Hello CircleCi!!"
+  }
+}
+
+build {
+  doLast {
+    tasks.Greetings.execute()  
+  }
+}
